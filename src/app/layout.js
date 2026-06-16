@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${outfit.className} h-full antialiased`}
     >
-      <body>
-        <Navbar></Navbar>{children}<Footer></Footer>
+      <body className="max-w-7xl mx-auto">
+        <Navbar></Navbar><main>{children}</main><Footer></Footer>
         </body>
     </html>
   );

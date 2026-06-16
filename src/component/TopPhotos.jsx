@@ -1,0 +1,20 @@
+import React from 'react';
+import PhotoCard from './PhotoCard';
+
+const TopPhotos = async () => {
+    const res = await fetch('https://illustrator-inky.vercel.app/data.json')
+    const photos = await res.json()
+    const topPhotos = photos.slice(0, 8)
+    return (
+        <div className='space-y-4 mt-4'>
+            <h1 className='text-3xl font-bold'>Top generation</h1>
+            <div className='grid grid-cols-4 gap-5'>
+                {
+                    topPhotos.map(photo=><PhotoCard key={photo.id} photo={photo}></PhotoCard>)
+                }
+                </div>
+        </div>
+    );
+};
+
+export default TopPhotos;

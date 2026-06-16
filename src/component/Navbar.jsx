@@ -14,8 +14,7 @@ const Navbar = () => {
             loading="eager"
             width={30}
             height={30}
-            className="object-cover h-auto w-auto"
-          />
+          ></Image>
           <h3 className="font-black text-lg">pixgen.</h3>
         </div>
 
